@@ -6,7 +6,7 @@ const createNote = async (req, res) => {
 
 const getNoes = async (req, res) => {
   const notes = await Note.find();
-  res.json(notes);
+  res.json('hello');
 };
 
 module.exports = {
