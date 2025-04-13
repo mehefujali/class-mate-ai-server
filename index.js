@@ -5,6 +5,7 @@ const port = process.env.PORT || 4000
 const dotenv = require('dotenv')
 const connectDB = require('./config/db')
 const noteRoutes = require('./routes/noteRoutes')
+const aiRoutes = require('./routes/aiRoutes');
 dotenv.config()
 
 //Middle ware 
@@ -19,7 +20,8 @@ connectDB()
 // routes
 app.use('/api/notes' , noteRoutes)
 
-
+/// Ai route
+app.use('/api', aiRoutes);
 
 app.get('/',(req,res)=>{
        res.status(200).json({
