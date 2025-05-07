@@ -4,7 +4,7 @@ const { DEEPSEEK_API_KEY, DEEPSEEK_API_URL } = require('../config/deepseek');
 async function askDeepSeek(prompt) {
   try {
     const response = await axios.post(DEEPSEEK_API_URL, {
-      model: "deepseek/deepseek-chat", // or "deepseek/deepseek-r1:free"
+      model: "deepseek/deepseek-r1", // or "deepseek/deepseek-r1:free"
       messages: [{ role: "user", content: prompt }],
     }, {
       headers: {

@@ -21,7 +21,7 @@ connectDB()
 app.use('/api/notes' , noteRoutes)
 
 /// Ai route
-app.use('/api', aiRoutes);
+app.use('/api/chat', aiRoutes);
 
 app.get('/',(req,res)=>{
        res.status(200).json({
